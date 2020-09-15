@@ -1,0 +1,133 @@
+{
+  "init": {
+    "id": "urn:dev:ops:m2ag-pca9685",
+    "title": "pca9685 pwm controller",
+    "type": [],
+    "description": "pca9685 with channel.duty_cycle exposed"
+  },
+  "props": {
+    "enb": {
+      "name": "enb",
+      "value": [
+        0,
+        0
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "enb",
+        "type": "integer",
+        "description": "The duty cycle of channel",
+        "minimum": 0,
+        "maximum": 65535
+      }
+    },
+    "ind": {
+      "name": "ind",
+      "value": [
+        1,
+        1
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "ind",
+        "type": "integer",
+        "description": "The duty cycle of channel",
+        "minimum": 0,
+        "maximum": 65535
+      }
+    },
+    "inc": {
+      "name": "inc",
+      "value": [
+        2,
+        2
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "inc",
+        "type": "integer",
+        "description": "The duty cycle of channel",
+        "minimum": 0,
+        "maximum": 65535
+      }
+    },
+    "inb": {
+      "name": "inb",
+      "value": [
+        3,
+        3
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "inb",
+        "type": "integer",
+        "description": "The duty cycle of channel",
+        "minimum": 0,
+        "maximum": 65535
+      }
+    },
+    "ina": {
+      "name": "ina",
+      "value": [
+        4,
+        4
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "ina",
+        "type": "integer",
+        "description": "The duty cycle of channel",
+        "minimum": 0,
+        "maximum": 65535
+      }
+    },
+    "ena": {
+      "name": "ena",
+      "value": [
+        5,
+        5
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "ena",
+        "type": "integer",
+        "description": "The duty cycle of channel",
+        "minimum": 0,
+        "maximum": 65535
+      }
+    },
+    "pan": {
+      "name": "pan",
+      "value": [
+        14,
+        14
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "pan",
+        "type": "integer",
+        "description": "The duty cycle of channel",
+        "minimum": 2000,
+        "maximum": 8000,
+        "init": 5000
+      }
+    },
+    "tilt": {
+      "name": "tilt",
+      "value": [
+        15,
+        15
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "tilt",
+        "type": "integer",
+        "description": "The duty cycle of channel",
+        "minimum": 5000,
+        "maximum": 8000,
+        "init": 6000
+      }
+    }
+  },
+  "events": {}
+}

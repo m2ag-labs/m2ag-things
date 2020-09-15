@@ -1,0 +1,26 @@
+{
+  "init": {
+    "id": "urn:dev:ops:m2ag-alert-buzzer",
+    "title": "--HOSTNAME--.alert",
+    "type": [
+      "Alarm"
+    ],
+    "description": "buzzer on pwm pin"
+  },
+  "props": {
+    "alarm": {
+      "name": "alarm",
+      "value": [
+        "alerting",
+        "alert"
+      ],
+      "metadata": {
+        "@type": "AlarmProperty",
+        "title": "Alarm",
+        "type": "boolean",
+        "description": "status of alert buzzer",
+        "readOnly": false
+      }
+    }
+  }
+}

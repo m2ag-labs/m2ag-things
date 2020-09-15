@@ -1,0 +1,24 @@
+{
+  "init": {
+    "address": "0x76",
+    "svc": "i2c"
+  },
+  "attr": {
+    "sea_level_pressure": "1016.8",
+    "mode": {
+      "adafruit_bme280": "MODE_NORMAL"
+    },
+    "standby_period": {
+      "adafruit_bme280": "STANDBY_TC_500"
+    },
+    "iir_filter": {
+      "adafruit_bme280": "IIR_FILTER_X16"
+    },
+    "overscan_humidity": {
+      "adafruit_bme280": "OVERSCAN_X1"
+    },
+    "overscan_temperature": {
+      "adafruit_bme280": "OVERSCAN_X2"
+    }
+  }
+}

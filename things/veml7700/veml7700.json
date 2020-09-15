@@ -1,0 +1,34 @@
+{
+  "init": {
+    "id": "urn:dev:ops:m2ag-veml7700",
+    "title": "--HOSTNAME--.veml7700",
+    "type": ["MultiLevelSensor"],
+    "description": "veml7700 to read ambient light"
+  },
+  "props": {
+    "light": {
+      "name": "light",
+      "value": [
+        "light",
+        "None"
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "light",
+        "type": "number",
+        "description": "light level",
+        "maximum": 12000,
+        "minimum": 0,
+        "multipleOf": 0,
+        "unit": "",
+        "readOnly": true
+      }
+    }
+  },
+  "poll": {
+    "members": [
+      { "light" : 100 }
+    ],
+    "poll_interval": 1000
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "init": {
+    "address": "0x18",
+    "svc": "i2c"
+  },
+  "attr": {
+    "range": {
+      "adafruit_lis3dh": "RANGE_2_G"
+    }
+  }
+}

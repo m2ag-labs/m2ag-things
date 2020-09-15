@@ -1,0 +1,87 @@
+{
+  "init": {
+    "id": "urn:dev:ops:m2ag-enviro",
+    "title": "--HOSTNAME--.enviro",
+    "type": [
+      "TemperatureSensor"
+    ],
+    "description": "temp/hum/press sensor"
+  },
+  "props": {
+    "humidity": {
+      "name": "humidity",
+      "value": [
+        "humidity",
+        "None"
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "humidity",
+        "type": "number",
+        "description": "current humidity %",
+        "minimum": 0,
+        "maximum": 100,
+        "multipleOf": 0.1,
+        "unit": "%",
+        "readOnly": true,
+        "vendor": { "style":  "radial" }
+      }
+    },
+    "temperature": {
+      "name": "temperature",
+      "value": [
+        "temperature",
+        "None"
+      ],
+      "metadata": {
+        "@type": "TemperatureProperty",
+        "title": "temperature",
+        "type": "number",
+        "description": "current temperature",
+        "minimum": 20,
+        "maximum": 110,
+        "multipleOf": 0.1,
+        "unit": "degree celsius",
+        "readOnly": true,
+        "vendor": { "style":  "linear",
+          "translator": "(value * 9/5) + 32",
+          "units": "degree fahrenheit"
+        }
+      }
+    },
+    "pressure": {
+      "name": "pressure",
+      "value": [
+         "pressure",
+        "None"
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "pressure",
+        "type": "number",
+        "description": "current pressure in hPa",
+        "minimum": 980,
+        "maximum": 1030,
+        "multipleOf": 0.1,
+        "unit": "hPa",
+        "readOnly": true,
+        "vendor": { "style":  "radial" }
+      }
+    }
+  },
+  "events": {},
+  "poll": {
+    "members": [
+      {
+        "temperature": 0.5
+      },
+      {
+        "humidity": 0.5
+      },
+      {
+        "pressure": 0.5
+      }
+    ],
+    "poll_interval": 6000
+  }
+}

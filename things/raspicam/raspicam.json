@@ -1,0 +1,40 @@
+{
+  "init": {
+    "id": "urn:dev:ops:m2ag-raspicam",
+    "title": "--HOSTNAME--.raspicam",
+    "type": [],
+    "description": "pan and tilt using pins 12 and 13"
+  },
+  "props": {
+    "pan": {
+      "name": "pan",
+      "value": [
+        12,
+        12
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "pan",
+        "type": "integer",
+        "description": "The duty cycle of channel",
+        "minimum": 50,
+        "maximum": 250
+      }
+    },
+    "tilt": {
+      "name": "tilt",
+      "value": [
+        13,
+        13
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "tilt",
+        "type": "integer",
+        "description": "The duty cycle of channel",
+        "minimum": 100,
+        "maximum": 200
+      }
+    }
+  }
+}

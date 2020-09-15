@@ -1,0 +1,33 @@
+{
+  "init": {
+    "id": "urn:dev:ops:m2ag-lis3dh",
+    "title": "--HOSTNAME--.lis3dh",
+    "type": ["MultiLevelSensor"],
+    "description": "lis3dh"
+  },
+  "props": {
+    "orient": {
+      "name": "orient",
+      "value": [
+        "orient",
+        "None"
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "orient",
+        "type": "number",
+        "minimum": 0,
+        "maximum": 2,
+        "multipleOf": 0,
+        "description": "Orientation, 0 portrait, 1 landscape, 2 on back",
+        "readOnly": true
+      }
+    }
+  },
+  "poll": {
+    "members": [
+      { "orient" : 0.5 }
+    ],
+    "poll_interval": 1000
+  }
+}

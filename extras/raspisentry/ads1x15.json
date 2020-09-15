@@ -1,0 +1,58 @@
+{
+  "init": {
+    "id": "urn:dev:ops:m2ag-ads1x15",
+    "title": "ads1x15",
+    "type": [
+      "MultiLevelSensor"
+    ],
+    "description": "ads1x15 channel 0 logic, 1 motor battery "
+  },
+  "props": {
+    "ch0": {
+      "name": "ch0",
+      "value": [
+        "ch0",
+        "None"
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "motor",
+        "type": "number",
+        "description": "motor battery voltage",
+        "minimum": 0,
+        "maximum": 4.0,
+        "multipleOf": 0.01,
+        "unit": "volt",
+        "readOnly": true
+      }
+    },
+    "ch1": {
+      "name": "ch1",
+      "value": [
+        "ch1",
+        "None"
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "logic",
+        "type": "number",
+        "description": "logic battery voltage",
+        "minimum": 0,
+        "maximum": 4.0,
+        "multipleOf": 0.01,
+        "unit": "volt",
+        "readOnly": true
+      }
+    }
+  },
+  "events": {},
+  "actions": {},
+  "poll": {
+
+    "members": [
+      {"ch0": 0.05 },
+      {"ch1": 0.05 }
+    ],
+    "poll_interval": 2000
+  }
+}

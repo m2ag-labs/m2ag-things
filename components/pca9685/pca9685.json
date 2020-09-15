@@ -1,0 +1,10 @@
+{
+  "init": {
+    "address": "0x40",
+    "svc": "i2c"
+  },
+  "attr": {
+    "reference_clock_speed": 27852800,
+    "frequency": 50
+  }
+}

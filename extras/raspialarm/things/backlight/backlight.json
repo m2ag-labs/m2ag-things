@@ -1,0 +1,52 @@
+{
+  "init": {
+    "id": "urn:dev:ops:m2ag-backlight",
+    "title": "backlight",
+    "type": ["MultiLevelSensor"],
+    "description": "veml7700 to controlled backlight"
+  },
+  "props": {
+    "light": {
+      "name": "light",
+      "value": [
+        "light",
+        "None"
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "light",
+        "type": "number",
+        "description": "light level",
+        "maximum": 13000,
+        "minimum": 0,
+        "multipleOf": 0,
+        "unit": "",
+        "readOnly": true
+      }
+    },
+    "state": {
+      "name": "state",
+      "value": [
+        "state",
+        "state"
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "state",
+        "type": "number",
+        "description": "current backlight state 0/1/2 off, on, ambient",
+        "maximum": 2,
+        "minimum": 0
+      }
+    }
+  },
+  "events": {},
+  "actions": {},
+  "poll": {
+    "members": [
+      {"light" : 100},
+      {"state" : 0.5}
+    ],
+    "poll_interval": 1000
+  }
+}
