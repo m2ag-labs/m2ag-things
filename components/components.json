@@ -17,5 +17,8 @@
       "adafruit-circuitpython-pca9685"
     ]
   },
-  "raspi": {}
+  "raspi": {},
+  "aqstation": {},
+  "airnow": {},
+  "nest": {}
 }

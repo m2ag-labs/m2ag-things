@@ -1,0 +1,14 @@
+{
+  "init":{
+    "config":{
+      "refresh-token" : "--REFRESH-TOKEN--",
+      "project-id":  "--PROJECT-ID--",
+      "oauth-client" : "--OAUTH-CLIENT--",
+      "oauth-secret" : "--OAUTH-SECRET--",
+      "devices": {
+        "--DEVICE-ID--" : "--DEVICE-LABEL--"
+      }
+    }
+},
+  "attr":{}
+}

@@ -1,0 +1,161 @@
+{
+ "init": {
+  "id": "urn:dev:ops:m2ag-hvac",
+  "title": "--HOSTNAME--.hvac",
+  "type": [
+   "MultiLevelSensor"
+  ],
+  "description": "an interface to nest thermostat control"
+ },
+ "props": {
+   "status": {
+   "name": "status",
+   "value": [
+    "status",
+    "None"
+   ],
+   "metadata": {
+    "title": "status",
+    "type": "integer",
+    "description": "-1 : request failure, 0 no data, 1 active",
+    "readOnly": true
+   }
+  },
+  "message": {
+   "name": "message",
+   "value": [
+    "message",
+    "None"
+   ],
+   "metadata": {
+    "title": "message",
+    "type": "string",
+    "description": "human readable status",
+    "readOnly": true
+   }
+  },
+  "lr_hvac": {
+      "name": "lr_hvac",
+      "value": [
+        "lr_hvac",
+        "None"
+      ],
+      "metadata": {
+        "@type": "HeatingCoolingProperty",
+        "title": "lr_hvac",
+        "type": "string",
+        "description": "hallway hvac - off,heat,cool",
+        "readOnly": true
+      }
+    },
+    "hw_hvac": {
+        "name": "hw_hvac",
+        "value": [
+        "hw_hvac",
+          "None"
+        ],
+        "metadata": {
+          "@type": "HeatingCoolingProperty",
+          "title": "hw_hvac",
+          "type": "string",
+          "description": "hallway hvac - off,heat,cool",
+          "readOnly": true
+        }
+      },
+      "up_fan": {
+      "name": "up_hvac",
+      "value": [
+       "up_hvac",
+        "None"
+      ],
+      "metadata": {
+        "@type": "HeatingCoolingProperty",
+        "title": "up_hvac",
+        "type": "string",
+        "description": "hallway hvac - off,heat,cool",
+        "readOnly": true
+      }
+    },
+    "up_timer": {
+      "name": "up_timer",
+      "value": [
+       "up_timer",
+       "up_timer"
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "up_timer",
+        "type": "number",
+        "description": "Minutes for the fan to run",
+        "minimum": 0,
+        "maximum": 30,
+        "unit": "minutes",
+        "readOnly": false
+      }
+    },
+    "hw_timer": {
+      "name": "hw_timer",
+      "value": [
+        "hw_timer",
+        "hw_timer"
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "hw_timer",
+        "type": "number",
+        "description": "Minutes for the fan to run",
+        "minimum": 0,
+        "maximum": 30,
+        "unit": "minutes",
+        "readOnly": false
+      }
+    },
+    "lr_timer": {
+      "name": "lr_timer",
+      "value": [
+        "lr_timer",
+        "lr_timer"
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "lr_timer",
+        "type": "number",
+        "description": "Minutes for the fan to run",
+        "minimum": 0,
+        "maximum": 30,
+        "unit": "minutes",
+        "readOnly": false
+      }
+    }
+ },
+ "events": {},
+ "poll": {
+  "members": [
+   {
+    "status": 1
+   },
+   {
+    "message": 1
+   },
+   {
+     "lr_hvac": 1
+   },
+   {
+     "hw_hvac": 1
+   },
+   {
+     "up_hvac": 1
+   },
+   {
+     "up_timer": 1
+   },
+   {
+     "hw_timer": 1
+   },
+   {
+     "lr_timer": 1
+   }
+  ],
+  "poll_interval": 20000
+ }
+}

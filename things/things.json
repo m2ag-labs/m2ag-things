@@ -5,5 +5,8 @@
     "pca9685": {},
     "raspi": {},
     "veml7700": {},
-    "lis3dh": {}
+    "lis3dh": {},
+    "aqstation": {},
+    "hvac": {},
+    "aqi": {}
 }
