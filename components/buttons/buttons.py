@@ -5,9 +5,9 @@ from gpiozero import Button
 
 class Buttons:
 
-    def __init__(self):
+    def __init__(self, config, logging):
         # print("button init")
-        self.green_button = Button(12)
+        self.green_button = Button(20)
         self.red_button = Button(16)
 
     def get(self, button):

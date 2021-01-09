@@ -7,8 +7,8 @@ import time
 
 class Alert:
 
-    def __init__(self):
-        self.buzzer = TonalBuzzer(13)
+    def __init__(self, config, logging):
+        self.buzzer = TonalBuzzer(config['init']['pin'])
         self.alerting = False
 
     # This maps to https://iot.mozilla.org/schemas/#Alarm

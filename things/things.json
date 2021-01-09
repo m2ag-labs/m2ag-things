@@ -1,4 +1,10 @@
 {
+    "ads1x15" : {},
+    "alert": {},
+    "enviro": {},
+    "pca9685": {},
+    "veml7700": {},
+    "lis3dh": {},
     "raspi": {},
     "aqstation": {},
     "hvac": {},
