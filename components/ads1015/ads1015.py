@@ -11,7 +11,7 @@ class Ads1015:
     # setup for single ended on 4 channels
     def __init__(self, i2c, config, logging):
         self.logging = logging
-        self.ads = ADS.ADS1015(i2c, address=config['address'])
+        self.ads = ADS.ADS1015(i2c, address=int(config['address'], 16))
         self.ch0 = AnalogIn(self.ads, ADS.P0)
         self.ch1 = AnalogIn(self.ads, ADS.P1)
         self.ch2 = AnalogIn(self.ads, ADS.P2)
