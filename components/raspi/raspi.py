@@ -4,7 +4,7 @@ import subprocess
 
 class Raspi:
 
-    def __init__(self, logging):
+    def __init__(self,config, logging):
         # Gather systemtype info
         pass
 

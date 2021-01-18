@@ -1,6 +1,6 @@
 {
   "init": {
-    "id": "urn:dev:ops:m2ag-ads1x15",
+    "id": "m2ag.ads1x15",
     "title": "--HOSTNAME--.ads1x15",
     "type": [
       "MultiLevelSensor"
