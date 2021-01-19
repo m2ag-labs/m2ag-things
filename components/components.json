@@ -1,21 +1,8 @@
 {
   "raspi": {},
-  "aqstation": {},
   "airnow": {},
-  "nest": {},
-  "ads1015": {
-    "driver": [
-      "adafruit-circuitpython-ads1x15"
-    ]
-  },
   "alert": {},
   "buttons": {},
-  "raspipwm": {},
-  "pca9685": {
-    "driver": [
-      "adafruit-circuitpython-pca9685"
-    ]
-  },
   "veml7700": {
     "driver": [
       "adafruit-circuitpython-veml7700"

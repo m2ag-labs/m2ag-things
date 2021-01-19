@@ -1,11 +1,6 @@
 {
-    "ads1x15" : {},
     "alert": {},
-    "pca9685": {},
-    "veml7700": {},
-    "lis3dh": {},
+    "aqi": {},
     "raspi": {},
-    "aqstation": {},
-    "hvac": {},
-    "aqi": {}
+    "veml7700": {}
 }
