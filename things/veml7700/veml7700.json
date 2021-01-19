@@ -1,6 +1,6 @@
 {
   "init": {
-    "id": "urn:dev:ops:m2ag-veml7700",
+    "id": "m2ag.veml7700",
     "title": "--HOSTNAME--.veml7700",
     "type": ["MultiLevelSensor"],
     "description": "veml7700 to read ambient light"
@@ -29,6 +29,6 @@
     "members": [
       { "light" : 100 }
     ],
-    "poll_interval": 1000
+    "poll_interval": 3000
   }
 }

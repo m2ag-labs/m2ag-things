@@ -9,16 +9,16 @@
     ]
   },
   "alert": {},
-  "bme280": {
-    "driver": [
-      "adafruit-circuitpython-bme280"
-    ]
-  },
   "buttons": {},
   "raspipwm": {},
   "pca9685": {
     "driver": [
       "adafruit-circuitpython-pca9685"
+    ]
+  },
+  "veml7700": {
+    "driver": [
+      "adafruit-circuitpython-veml7700"
     ]
   }
 }
