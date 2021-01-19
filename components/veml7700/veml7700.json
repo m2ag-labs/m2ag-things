@@ -1,6 +1,6 @@
 {
   "init": {
-    "address": "0x10",
+    "address": "0x18S",
     "svc": "i2c"
   },
   "attr": {}
