@@ -1,24 +1,14 @@
-import adafruit_lis3dh
-
-# sudo pip3 install adafruit-circuitpython-lis3dh
-# https://circuitpython.readthedocs.io/projects/lis3dh/en/latest/api.html
+from device.hardware.i2cwrapper import I2cWrapper
 
 
-class Lis3dh:
+class Lis3dh(I2cWrapper):
 
-    def __init__(self, i2c, address=0x18):
-        self.lis3dh = adafruit_lis3dh.LIS3DH_I2C(i2c, address=address)
+    def __init__(self, config, logging, i2c):
+        I2cWrapper.__init__(self, config, logging, i2c)
 
     def get(self, val):
-        if val == 'orient':
-            x, y, z = [value / adafruit_lis3dh.STANDARD_GRAVITY for value in self.lis3dh.acceleration]
-            if abs(z) > 0.890:
-                return 0
-            if abs(y) > 0.890:
-                return 1
-            if abs(x) > 0.890:
-                return 2
-            else:
-                return 3
-
-
+        values = ['x', 'y', 'z']
+        if val in values:
+            return getattr(self.device, 'acceleration')[values.index(val)]
+        else:
+            return super().get(val)

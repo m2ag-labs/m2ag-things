@@ -1,0 +1,65 @@
+{
+  "init": {
+    "id": "m2ag.htu21d",
+    "title": "--HOSTNAME--.htu21d",
+    "type": [
+      "TemperatureSensor"
+    ],
+    "description": "humidity sensor"
+  },
+  "props": {
+    "temperature": {
+      "name": "temperature",
+      "value": [
+        "temperature",
+        "None"
+      ],
+      "metadata": {
+        "@type": "TemperatureProperty",
+        "title": "temperature",
+        "type": "number",
+        "description": "current temperature",
+        "minimum": 20,
+        "maximum": 110,
+        "multipleOf": 0.1,
+        "unit": "degree celsius",
+        "readOnly": true,
+        "vendor": { "style":  "linear",
+          "translator": "(value * 9/5) + 32",
+          "units": "degree fahrenheit"
+        }
+      }
+    },
+    "relative_humidity": {
+      "name": "relative_humidity",
+      "value": [
+        "relative_humidity",
+        "None"
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "relative_humidity",
+        "type": "number",
+        "description": "current humidity %",
+        "minimum": 0,
+        "maximum": 100,
+        "multipleOf": 0.1,
+        "unit": "%",
+        "readOnly": true,
+        "vendor": { "style":  "radial" }
+      }
+    }
+  },
+  "events": {},
+  "poll": {
+    "members": [
+      {
+        "relative_humidity": 0.5
+      },
+      {
+        "temperature": 0.5
+      }
+    ],
+    "poll_interval": 6000
+  }
+}

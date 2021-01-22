@@ -1,6 +1,10 @@
 {
     "alert": {},
     "aqi": {},
+    "bmp280": {},
+    "buttons": {},
+    "htu21d":{},
+    "lis3dh": {},
     "raspi": {},
     "veml7700": {}
 }

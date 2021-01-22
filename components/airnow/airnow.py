@@ -1,5 +1,5 @@
 import requests
-from datetime import datetime
+# from datetime import datetime
 import json
 
 URL_ROOT = 'https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json'

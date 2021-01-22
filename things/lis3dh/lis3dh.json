@@ -1,33 +1,63 @@
 {
   "init": {
-    "id": "urn:dev:ops:m2ag-lis3dh",
+    "id": "m2ag.lis3dh",
     "title": "--HOSTNAME--.lis3dh",
     "type": ["MultiLevelSensor"],
     "description": "lis3dh"
   },
   "props": {
-    "orient": {
-      "name": "orient",
+    "x": {
+      "name": "x",
       "value": [
-        "orient",
+        "x",
         "None"
       ],
       "metadata": {
         "@type": "LevelProperty",
-        "title": "orient",
+        "title": "x",
         "type": "number",
-        "minimum": 0,
-        "maximum": 2,
         "multipleOf": 0,
-        "description": "Orientation, 0 portrait, 1 landscape, 2 on back",
+        "description": "X axis acceleration",
+        "readOnly": true
+      }
+    },
+    "y": {
+      "name": "y",
+      "value": [
+        "y",
+        "None"
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "y",
+        "type": "number",
+        "multipleOf": 0,
+        "description": "Y axis acceleration",
+        "readOnly": true
+      }
+    },
+    "z": {
+      "name": "z",
+      "value": [
+        "z",
+        "None"
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "z",
+        "type": "number",
+        "multipleOf": 0,
+        "description": "Z axis acceleration",
         "readOnly": true
       }
     }
   },
   "poll": {
     "members": [
-      { "orient" : 0.5 }
+      { "x" : 0.5 },
+      { "y" : 0.5 },
+      { "z" : 0.5 }
     ],
-    "poll_interval": 1000
+    "poll_interval": 3000
   }
 }

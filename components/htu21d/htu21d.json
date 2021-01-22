@@ -1,0 +1,9 @@
+{
+  "init": {
+    "address": "0x40",
+    "svc": "i2c",
+    "driver" : "adafruit_htu21d",
+    "device": "HTU21D"
+  },
+  "attr": {}
+}

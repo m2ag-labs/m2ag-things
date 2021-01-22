@@ -1,7 +1,9 @@
 {
   "init": {
     "address": "0x10",
-    "svc": "i2c"
+    "svc": "i2c",
+    "driver": "adafruit_veml7700",
+    "device": "VEML7700"
   },
   "attr": {}
 }
