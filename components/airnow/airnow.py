@@ -3,7 +3,7 @@ import requests
 import json
 
 URL_ROOT = 'https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json'
-
+# https://www.airnowapi.org/aq/forecast/zipCode/?format=application/json&zipCode=95035&date=2021-02-20&distance=10&API_KEY=F645EE29-C2F9-4B8D-B670-F5253A0F0F76
 
 class Airnow:
 
@@ -15,7 +15,7 @@ class Airnow:
     # This maps to https://iot.mozilla.org/schemas
     #
     def get_data(self):
-        url = f'{URL_ROOT}&zipCode={self.config["zipCode"]}&distance={self.config["distance"]}&API_KEY={self.config["apiKey"]}'
+        url = f'{URL_ROOT}&zipCode={self.config["init"]["zipCode"]}&distance={self.config["init"]["distance"]}&API_KEY={self.config["init"]["apiKey"]}'
         response = requests.request("GET", url, headers={}, data={})
         j = json.loads(response.text)
         self.data['pm2'] = -1
