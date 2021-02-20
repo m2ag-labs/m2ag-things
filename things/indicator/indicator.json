@@ -1,0 +1,39 @@
+{
+  "init": {
+    "id": "m2ag-indicator",
+    "title": "--HOSTNAME--.indicator",
+    "type": [
+      "MultiLevelSensor"
+    ],
+    "description": "control inicator neopixel"
+  },
+  "props": {
+    "mode": {
+      "name": "mode",
+      "value": [
+        "mode",
+        "mode"
+      ],
+      "metadata": {
+        "@type": "LevelProperty",
+        "title": "mode",
+        "type": "integer",
+        "description": "set indicator mode",
+        "minimum": 0,
+        "maximum": 5,
+        "unit": "level",
+        "readOnly": false
+      }
+    }
+  },
+  "events": {},
+  "poll": {
+    "members": [
+      {
+        "mode": 1
+      }
+    ],
+    "poll_interval": 20000
+  }
+}
+

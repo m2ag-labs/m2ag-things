@@ -41,14 +41,14 @@
         "title": "cpu_freq",
         "type": "number",
         "description": "current cpu frequency",
-        "minimum": 700,
-        "maximum": 1400,
+        "minimum": 600,
+        "maximum": 1500,
         "multipleOf": 0.1,
         "unit": "hertz",
         "readOnly": true,
         "vendor": {
           "style": "radial",
-          "highlights" : { "danger" : [700, 900], "caution" : [900,1100], "normal": [1100,1400]}
+          "highlights" : { "normal" : [600, 900], "caution" : [900,1100], "danger": [1100,1500]}
         }
       }
     },
