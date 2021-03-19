@@ -53,12 +53,8 @@
   "events": {},
   "poll": {
     "members": [
-      {
-        "relative_humidity": 0.5
-      },
-      {
-        "temperature": 0.5
-      }
+        "relative_humidity",
+        "temperature"
     ],
     "poll_interval": 6000
   }

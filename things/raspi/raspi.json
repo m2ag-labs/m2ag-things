@@ -134,8 +134,8 @@
   "events": {},
   "poll": {
     "members": [
-      {"cpu_temp": 1.0},
-      {"cpu_freq": 1.0}
+      "cpu_temp",
+      "cpu_freq"
     ],
     "poll_interval": 1000
   }

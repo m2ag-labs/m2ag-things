@@ -91,21 +91,11 @@
  "events": {},
  "poll": {
   "members": [
-   {
-    "status": 0.5
-   },
-   {
-    "message": 1
-   },
-   {
-    "pm2": 0.5
-   },
-   {
-    "ozone": 0.5
-   },
-   {
-    "hour_observed": 0.5
-   }
+   "status",
+   "message",
+   "pm2",
+   "ozone",
+   "hour_observed"
   ],
   "poll_interval": 600000
  }

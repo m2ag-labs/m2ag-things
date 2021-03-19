@@ -27,7 +27,7 @@
   },
   "poll": {
     "members": [
-      { "light" : 100 }
+      "light"
     ],
     "poll_interval": 3000
   }

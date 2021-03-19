@@ -29,9 +29,7 @@
   "events": {},
   "poll": {
     "members": [
-      {
-        "mode": 1
-      }
+      "mode"
     ],
     "poll_interval": 20000
   }

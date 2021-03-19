@@ -2,7 +2,9 @@
   "init": {
     "id": "m2ag.lis3dh",
     "title": "--HOSTNAME--.lis3dh",
-    "type": ["MultiLevelSensor"],
+    "type": [
+      "MultiLevelSensor"
+    ],
     "description": "lis3dh"
   },
   "props": {
@@ -54,9 +56,9 @@
   },
   "poll": {
     "members": [
-      { "x" : 0.5 },
-      { "y" : 0.5 },
-      { "z" : 0.5 }
+      "x",
+      "y",
+      "z"
     ],
     "poll_interval": 3000
   }
