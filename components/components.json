@@ -1,5 +1,4 @@
 {
-  "airnow": {},
   "alert": {},
   "bmp280": {
     "driver": [

@@ -1,9 +1,0 @@
-{
-  "init": {
-    "address": "0x10",
-    "svc": "i2c"
-  },
-  "attr": {
-    "pwm_pin" : 13
-  }
-}

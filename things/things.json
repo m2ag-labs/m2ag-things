@@ -1,6 +1,5 @@
 {
     "alert": {},
-    "aqi": {},
     "bmp280": {},
     "buttons": {},
     "htu21d":{},
