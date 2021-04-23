@@ -1,9 +1,25 @@
 {
-    "alert": {},
-    "bmp280": {},
-    "buttons": {},
-    "htu21d":{},
-    "lis3dh": {},
-    "raspi": {},
-    "veml7700": {}
+  "alert": {},
+  "raspi": {},
+  "bmp280": {
+    "driver": [
+      "adafruit-circuitpython-bmp280"
+    ]
+  },
+  "htu21d": {
+    "driver": [
+      "adafruit-circuitpython-htu21d"
+    ]
+  },
+  "lis3dh": {
+    "driver": [
+      "adafruit-circuitpython-lis3dh"
+    ]
+  },
+  "veml7700": {
+    "driver": [
+      "adafruit-circuitpython-veml7700"
+    ]
+  }
 }
+

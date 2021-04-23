@@ -1,23 +1,59 @@
 {
   "service": {
     "init": {
-      "address": "0x77",
-      "svc": "i2c",
-      "driver": "adafruit_bmp280",
-      "device": "Adafruit_BMP280_I2C"
+      "address": "0x76",
+      "svc": "i2c"
     },
-    "attr": {}
+    "attr": {
+      "sea_level_pressure": "1016.8",
+      "mode": {
+        "adafruit_bme280": "MODE_NORMAL"
+      },
+      "standby_period": {
+        "adafruit_bme280": "STANDBY_TC_500"
+      },
+      "iir_filter": {
+        "adafruit_bme280": "IIR_FILTER_X16"
+      },
+      "overscan_humidity": {
+        "adafruit_bme280": "OVERSCAN_X1"
+      },
+      "overscan_temperature": {
+        "adafruit_bme280": "OVERSCAN_X2"
+      }
+    }
   },
   "thing": {
     "init": {
-      "id": "m2ag.bmp280",
-      "title": "--HOSTNAME--.bmp280",
+      "id": "urn:dev:ops:m2ag-enviro",
+      "title": "--HOSTNAME--.enviro",
       "type": [
         "TemperatureSensor"
       ],
-      "description": "temp/press sensor"
+      "description": "temp/hum/press sensor"
     },
     "props": {
+      "humidity": {
+        "name": "humidity",
+        "value": [
+          "humidity",
+          "None"
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "humidity",
+          "type": "number",
+          "description": "current humidity %",
+          "minimum": 0,
+          "maximum": 100,
+          "multipleOf": 0.1,
+          "unit": "%",
+          "readOnly": true,
+          "vendor": {
+            "style": "radial"
+          }
+        }
+      },
       "temperature": {
         "name": "temperature",
         "value": [
@@ -68,6 +104,9 @@
       "members": [
         {
           "temperature": 0.5
+        },
+        {
+          "humidity": 0.5
         },
         {
           "pressure": 0.5

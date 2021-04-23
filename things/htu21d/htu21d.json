@@ -1,61 +1,75 @@
 {
-  "init": {
-    "id": "m2ag.htu21d",
-    "title": "--HOSTNAME--.htu21d",
-    "type": [
-      "TemperatureSensor"
-    ],
-    "description": "humidity sensor"
+  "service": {
+    "init": {
+      "address": "0x40",
+      "svc": "i2c",
+      "driver": "adafruit_htu21d",
+      "device": "HTU21D"
+    },
+    "attr": {}
   },
-  "props": {
-    "temperature": {
-      "name": "temperature",
-      "value": [
-        "temperature",
-        "None"
+  "thing": {
+    "init": {
+      "id": "m2ag.htu21d",
+      "title": "--HOSTNAME--.htu21d",
+      "type": [
+        "TemperatureSensor"
       ],
-      "metadata": {
-        "@type": "TemperatureProperty",
-        "title": "temperature",
-        "type": "number",
-        "description": "current temperature",
-        "minimum": 20,
-        "maximum": 110,
-        "multipleOf": 0.1,
-        "unit": "degree celsius",
-        "readOnly": true,
-        "vendor": { "style":  "linear",
-          "translator": "(value * 9/5) + 32",
-          "units": "degree fahrenheit"
+      "description": "humidity sensor"
+    },
+    "props": {
+      "temperature": {
+        "name": "temperature",
+        "value": [
+          "temperature",
+          "None"
+        ],
+        "metadata": {
+          "@type": "TemperatureProperty",
+          "title": "temperature",
+          "type": "number",
+          "description": "current temperature",
+          "minimum": 20,
+          "maximum": 110,
+          "multipleOf": 0.1,
+          "unit": "degree celsius",
+          "readOnly": true,
+          "vendor": {
+            "style": "linear",
+            "translator": "(value * 9/5) + 32",
+            "units": "degree fahrenheit"
+          }
+        }
+      },
+      "relative_humidity": {
+        "name": "relative_humidity",
+        "value": [
+          "relative_humidity",
+          "None"
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "relative_humidity",
+          "type": "number",
+          "description": "current humidity %",
+          "minimum": 0,
+          "maximum": 100,
+          "multipleOf": 0.1,
+          "unit": "%",
+          "readOnly": true,
+          "vendor": {
+            "style": "radial"
+          }
         }
       }
     },
-    "relative_humidity": {
-      "name": "relative_humidity",
-      "value": [
-        "relative_humidity",
-        "None"
-      ],
-      "metadata": {
-        "@type": "LevelProperty",
-        "title": "relative_humidity",
-        "type": "number",
-        "description": "current humidity %",
-        "minimum": 0,
-        "maximum": 100,
-        "multipleOf": 0.1,
-        "unit": "%",
-        "readOnly": true,
-        "vendor": { "style":  "radial" }
-      }
-    }
-  },
-  "events": {},
-  "poll": {
-    "members": [
+    "events": {},
+    "poll": {
+      "members": [
         "relative_humidity",
         "temperature"
-    ],
-    "poll_interval": 6000
+      ],
+      "poll_interval": 6000
+    }
   }
 }

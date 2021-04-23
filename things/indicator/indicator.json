@@ -1,37 +1,44 @@
 {
-  "init": {
-    "id": "m2ag-indicator",
-    "title": "--HOSTNAME--.indicator",
-    "type": [
-      "MultiLevelSensor"
-    ],
-    "description": "control inicator neopixel"
+  "service": {
+    "init": {
+      "pin": 18
+    },
+    "attr": {}
   },
-  "props": {
-    "mode": {
-      "name": "mode",
-      "value": [
-        "mode",
+  "thing": {
+    "init": {
+      "id": "m2ag-indicator",
+      "title": "--HOSTNAME--.indicator",
+      "type": [
+        "MultiLevelSensor"
+      ],
+      "description": "control indicator neopixel"
+    },
+    "props": {
+      "mode": {
+        "name": "mode",
+        "value": [
+          "mode",
+          "mode"
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "mode",
+          "type": "integer",
+          "description": "set indicator mode",
+          "minimum": 0,
+          "maximum": 5,
+          "unit": "level",
+          "readOnly": false
+        }
+      }
+    },
+    "events": {},
+    "poll": {
+      "members": [
         "mode"
       ],
-      "metadata": {
-        "@type": "LevelProperty",
-        "title": "mode",
-        "type": "integer",
-        "description": "set indicator mode",
-        "minimum": 0,
-        "maximum": 5,
-        "unit": "level",
-        "readOnly": false
-      }
+      "poll_interval": 20000
     }
-  },
-  "events": {},
-  "poll": {
-    "members": [
-      "mode"
-    ],
-    "poll_interval": 20000
   }
 }
-

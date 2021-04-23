@@ -1,9 +1,0 @@
-{
-  "init": {
-    "address": "0x77",
-    "svc": "i2c",
-    "driver": "adafruit_bmp280",
-    "device": "Adafruit_BMP280_I2C"
-  },
-  "attr": {}
-}

@@ -1,34 +1,47 @@
 {
-  "init": {
-    "id": "m2ag.veml7700",
-    "title": "--HOSTNAME--.veml7700",
-    "type": ["MultiLevelSensor"],
-    "description": "veml7700 to read ambient light"
+  "service": {
+    "init": {
+      "address": "0x10",
+      "svc": "i2c",
+      "driver": "adafruit_veml7700",
+      "device": "VEML7700"
+    },
+    "attr": {}
   },
-  "props": {
-    "light": {
-      "name": "light",
-      "value": [
-        "light",
-        "None"
+  "thing": {
+    "init": {
+      "id": "m2ag.veml7700",
+      "title": "--HOSTNAME--.veml7700",
+      "type": [
+        "MultiLevelSensor"
       ],
-      "metadata": {
-        "@type": "LevelProperty",
-        "title": "light",
-        "type": "number",
-        "description": "light level",
-        "maximum": 12000,
-        "minimum": 0,
-        "multipleOf": 0,
-        "unit": "",
-        "readOnly": true
+      "description": "veml7700 to read ambient light"
+    },
+    "props": {
+      "light": {
+        "name": "light",
+        "value": [
+          "light",
+          "None"
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "light",
+          "type": "number",
+          "description": "light level",
+          "maximum": 12000,
+          "minimum": 0,
+          "multipleOf": 0,
+          "unit": "",
+          "readOnly": true
+        }
       }
+    },
+    "poll": {
+      "members": [
+        "light"
+      ],
+      "poll_interval": 3000
     }
-  },
-  "poll": {
-    "members": [
-      "light"
-    ],
-    "poll_interval": 3000
   }
 }
