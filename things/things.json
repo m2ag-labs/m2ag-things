@@ -6,6 +6,16 @@
       "adafruit-circuitpython-bmp280"
     ]
   },
+  "bme680": {
+    "driver": [
+      "adafruit-circuitpython-bme680"
+    ]
+  },
+  "ccs811": {
+    "driver": [
+      "adafruit-circuitpython-ccs811"
+    ]
+  },
   "htu21d": {
     "driver": [
       "adafruit-circuitpython-htu21d"
@@ -15,6 +25,11 @@
     "driver": [
       "adafruit-circuitpython-lis3dh"
     ]
+  },
+  "pmsa3000i": {
+      "driver": [
+        "adafruit-circuitpython-pm25"
+      ]
   },
   "veml7700": {
     "driver": [
