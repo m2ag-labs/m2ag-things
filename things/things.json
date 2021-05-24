@@ -1,6 +1,10 @@
 {
   "alert": {},
-  "raspi": {},
+  "bme280": {
+    "driver": [
+      "adafruit-circuitpython-bme280"
+    ]
+  },
   "bmp280": {
     "driver": [
       "adafruit-circuitpython-bmp280"
@@ -31,6 +35,7 @@
         "adafruit-circuitpython-pm25"
       ]
   },
+  "raspi": {},
   "veml7700": {
     "driver": [
       "adafruit-circuitpython-veml7700"
