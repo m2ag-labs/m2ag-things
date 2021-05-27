@@ -38,7 +38,7 @@
       "adafruit-circuitpython-lis3dh"
     ]
   },
-  "pmsa3000i": {
+  "pmsa003i": {
     "helper": true,
       "driver": [
         "adafruit-circuitpython-pm25"

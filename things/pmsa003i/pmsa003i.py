@@ -2,7 +2,7 @@
 from device.services.i2cwrapper import I2cWrapper
 
 
-class Pmsa300i(I2cWrapper):
+class Pmsa003i(I2cWrapper):
 
     def __init__(self, config, logging, i2c):
         I2cWrapper.__init__(self, config, logging, i2c)
