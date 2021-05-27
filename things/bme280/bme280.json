@@ -30,7 +30,7 @@
   },
   "thing": {
     "init": {
-      "id": "m2ag.bme280",
+      "id": "urn:dev:m2ag.labs.bme280",
       "title": "--HOSTNAME--.bme280",
       "type": [
         "TemperatureSensor"

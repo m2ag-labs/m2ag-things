@@ -10,12 +10,12 @@
   },
   "thing": {
     "init": {
-      "id": "urn:dev:ops:m2ag-pmsa300i",
-      "title": "raspib.m2ag-pms300i",
+      "id": "urn:dev:m2ag.labs.pmsa003i",
+      "title": "raspib.m2ag-pms003i",
       "type": [
         "MultiLevelSensor"
       ],
-      "description": "an interface to PMSA300i"
+      "description": "an interface to PMSA003i"
     },
     "props": {
       "pm2": {

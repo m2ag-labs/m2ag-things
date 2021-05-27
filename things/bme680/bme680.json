@@ -18,7 +18,7 @@
   },
   "thing": {
     "init": {
-      "id": "m2ag.bme680",
+      "id": "urn:dev:m2ag.labs.bme680",
       "title": "raspib.bme680",
       "type": [
         "TemperatureSensor"

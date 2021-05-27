@@ -10,7 +10,7 @@
   },
   "thing": {
   "init": {
-    "id": "m2ag.bmp280",
+    "id": "urn:dev:m2ag.labs.bmp280",
     "title": "--HOSTNAME--.bmp280",
     "type": [
       "TemperatureSensor"

@@ -14,7 +14,7 @@
   },
   "thing": {
     "init": {
-      "id": "m2ag.lis3dh",
+      "id": "urn:dev:m2ag.labs.lis3dh",
       "title": "--HOSTNAME--.lis3dh",
       "type": [
         "MultiLevelSensor"

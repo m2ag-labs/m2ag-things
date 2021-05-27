@@ -10,7 +10,7 @@
   },
   "thing": {
     "init": {
-      "id": "m2ag.ccs811",
+      "id": "urn:dev:m2ag.labs.ccs811",
       "title": "--HOSTNAME--.ccs811",
       "type": [
         "TemperatureSensor"

@@ -5,7 +5,7 @@
   },
   "thing": {
     "init": {
-      "id": "urn:dev:ops:m2ag-raspiinfo",
+      "id": "urn:dev:m2ag.labs.raspi",
       "title": "--HOSTNAME--.system",
       "type": [
         "TemperatureSensor"

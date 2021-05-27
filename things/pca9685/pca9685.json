@@ -11,7 +11,7 @@
   },
   "thing": {
     "init": {
-      "id": "m2ag.pca9685",
+      "id": "urn:dev:m2ag.labs.pca9685",
       "title": "--HOSTNAME--.pca9685",
       "type": [
         "MultiLevelSwitch"

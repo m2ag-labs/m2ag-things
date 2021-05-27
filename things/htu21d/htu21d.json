@@ -10,7 +10,7 @@
   },
   "thing": {
     "init": {
-      "id": "m2ag.htu21d",
+      "id": "urn:dev:m2ag.labs.htu21d",
       "title": "--HOSTNAME--.htu21d",
       "type": [
         "TemperatureSensor"

@@ -7,7 +7,7 @@
   },
   "thing": {
     "init": {
-      "id": "urn:dev:ops:m2ag-alert-buzzer",
+      "id": "urn:dev:m2ag.labs.alert",
       "title": "--HOSTNAME--.alert",
       "type": [
         "Alarm"

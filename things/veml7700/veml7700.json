@@ -10,7 +10,7 @@
   },
   "thing": {
     "init": {
-      "id": "m2ag.veml7700",
+      "id": "urn:dev:m2ag.labs.veml7700",
       "title": "--HOSTNAME--.veml7700",
       "type": [
         "MultiLevelSensor"
