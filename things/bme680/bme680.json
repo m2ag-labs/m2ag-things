@@ -1,0 +1,158 @@
+{
+  "service": {
+    "init": {
+      "address": "0x77",
+      "svc": "i2c",
+      "driver": "adafruit_bme680",
+      "device": "Adafruit_BME680_I2C"
+    },
+    "attr": {
+      "temperature_oversample": 2,
+      "humidity_oversample": 2,
+      "pressure_oversample": 2,
+      "filter_size": 3
+    },
+    "offsets": {
+      "temperature": -2
+    }
+  },
+  "thing": {
+    "init": {
+      "id": "m2ag.bme680",
+      "title": "raspib.bme680",
+      "type": [
+        "TemperatureSensor"
+      ],
+      "description": "temp/hum/press/gas sensor"
+    },
+    "props": {
+      "temperature": {
+        "name": "temperature",
+        "value": [
+          "temperature",
+          "None"
+        ],
+        "metadata": {
+          "@type": "TemperatureProperty",
+          "title": "temperature",
+          "type": "number",
+          "description": "current temperature",
+          "minimum": 20,
+          "maximum": 110,
+          "multipleOf": 0.1,
+          "unit": "degree celsius",
+          "readOnly": true,
+          "vendor": {
+            "style": "linear",
+            "translator": "(value * 9/5) + 32",
+            "units": "degree fahrenheit"
+          }
+        }
+      },
+      "pressure": {
+        "name": "pressure",
+        "value": [
+          "pressure",
+          "None"
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "pressure",
+          "type": "number",
+          "description": "current pressure in hPa",
+          "minimum": 980,
+          "maximum": 1030,
+          "multipleOf": 0.1,
+          "unit": "hPa",
+          "readOnly": true,
+          "vendor": {
+            "style": "radial"
+          }
+        }
+      },
+      "relative_humidity": {
+        "name": "relative_humidity",
+        "value": [
+          "relative_humidity",
+          "None"
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "relative_humidity",
+          "type": "number",
+          "description": "current humidity %",
+          "minimum": 0,
+          "maximum": 100,
+          "multipleOf": 0.1,
+          "unit": "%",
+          "readOnly": true,
+          "vendor": {
+            "style": "radial"
+          }
+        }
+      },
+      "gas": {
+        "name": "gas",
+        "value": [
+          "gas",
+          "None"
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "gas",
+          "type": "number",
+          "description": "current resistor value",
+          "minimum": 0,
+          "maximum": 60000,
+          "multipleOf": 0.1,
+          "unit": "ohms",
+          "readOnly": true
+        }
+      },
+      "iaq": {
+        "name": "iaq",
+        "value": [
+          "iaq",
+          "None"
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "iaq",
+          "type": "integer",
+          "description": "calculated air quality",
+          "minimum": 0,
+          "maximum": 500,
+          "readOnly": true
+        }
+      },
+      "iaq_avg": {
+        "name": "iaq_avg",
+        "value": [
+          "iaq_avg",
+          "None"
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "iaq_avg",
+          "type": "integer",
+          "description": "calculated air quality avg of last 60 samples",
+          "minimum": 0,
+          "maximum": 500,
+          "readOnly": true
+        }
+      }
+    },
+    "events": {},
+    "poll": {
+      "members": [
+        "temperature",
+        "pressure",
+        "relative_humidity",
+        "gas",
+        "iaq",
+        "iaq_avg"
+      ],
+      "poll_interval": 10000
+    }
+  }
+}
