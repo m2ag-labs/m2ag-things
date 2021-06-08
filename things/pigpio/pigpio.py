@@ -1,7 +1,7 @@
 from gpiozero.pins.pigpio import PiGPIOFactory
 from gpiozero import Device, Servo
 from gpiozero import Button
-from gpiozero import LED
+from gpiozero import LED, PWMLED
 
 
 # https://gpiozero.readthedocs.io/en/stable/api_input.html
@@ -16,7 +16,9 @@ class Pigpio:
         # TODO: PiGPIO daemon must be running and port moved to 8889
         # TODO: add more config options for servo
         # TODO: what other gpiozero types?
-        Device.pin_factory = PiGPIOFactory(port=8889)
+        if 'pigpio' in config:
+            if config['pigpio']:
+                Device.pin_factory = PiGPIOFactory(port=8889)
         self.attr = config['attr']['input']
         self.logging = logging
         if 'input' in config['init']:
@@ -43,6 +45,14 @@ class Pigpio:
                 except:
                     self.logging.error(f'GPIO: {i} would not initialize')
 
+        if 'pwm' in config['init']:
+            for i in config['init']['pwm']:
+                short = config['init']['pwm'][i]
+                try:
+                    setattr(self, i, PWMLED(pin=short['pin'], active_high=short['active_high'], initial_value=short['initial_value']))
+                except:
+                    self.logging.error(f'GPIO: {i} would not initialize')
+
     def get(self, target):
         if hasattr(self, target):
             if type(getattr(self, target[0])) is LED:
@@ -51,6 +61,8 @@ class Pigpio:
                 return getattr(self, target[0]).is_pressed()
             if type(getattr(self, target[0])) is Servo:
                 return (getattr(self, target[0]).value + 1) * 100
+            if type(getattr(self, target[0])) is PWMLED:
+                return getattr(self, target[0]).value * 100
         else:
             self.logging.error(target + " gpio not found")
             return -1
@@ -60,3 +72,5 @@ class Pigpio:
             getattr(self, target[0]).value = target[1]
         if type(getattr(self, target[0])) is Servo:
             getattr(self, target[0]).value = (2.0 * (target[1] / 100.0)) - 1.0
+        if type(getattr(self, target[0])) is PWMLED:
+            getattr(self, target[0]).value = 1 * (target[1] / 100)

@@ -38,6 +38,9 @@
       "adafruit-circuitpython-lis3dh"
     ]
   },
+  "pgpio": {
+    "helper" : true
+  },
   "pmsa003i": {
     "helper": true,
       "driver": [

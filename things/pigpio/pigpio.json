@@ -8,15 +8,17 @@
         }
       },
       "output": {
-        "run": {
-          "pin": 19,
-          "active_high": true,
-          "initial_value": false
-        }
       },
       "servo": {
         "servo": {
           "pin": 12
+        }
+      },
+      "pwm": {
+        "run": {
+          "pin": 19,
+          "active_high": true,
+          "initial_value": false
         }
       }
     },
@@ -55,17 +57,19 @@
       "run": {
         "name": "run",
         "value": [
-          false,
+          0,
           "run",
           {
             "index": "run"
           }
         ],
         "metadata": {
-          "@type": "PushedProperty",
-          "title": "shutdown",
-          "type": "boolean",
+          "@type": "LevelProperty",
+          "title": "run",
+          "type": "integer",
           "description": "running led",
+          "minimum": 0,
+          "maximum": 100,
           "readOnly": false
         }
       },
@@ -84,7 +88,8 @@
           "type": "integer",
           "description": "gpiozero servo ",
           "minimum": 0,
-          "maximum": 100
+          "maximum": 100,
+          "readOnly": false
         }
       }
     }
