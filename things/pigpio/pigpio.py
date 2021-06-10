@@ -1,3 +1,4 @@
+import time
 from gpiozero.pins.pigpio import PiGPIOFactory
 from gpiozero import Device, Servo
 from gpiozero import Button
@@ -16,9 +17,12 @@ class Pigpio:
         # TODO: PiGPIO daemon must be running and port moved to 8889
         # TODO: add more config options for servo
         # TODO: what other gpiozero types?
-        if 'pigpio' in config:
-            if config['pigpio']:
-                Device.pin_factory = PiGPIOFactory(port=8889)
+        if 'pigpio' in config['init']:
+            if config['init']['pigpio']:
+                try:
+                    Device.pin_factory = PiGPIOFactory(port=8889)
+                except OSError:
+                    return
         self.attr = config['attr']['input']
         self.logging = logging
         if 'input' in config['init']:
@@ -42,6 +46,8 @@ class Pigpio:
                 short = config['init']['servo'][i]
                 try:
                     setattr(self, i, Servo(pin=short['pin']))
+                    if type(Device.pin_factory) is not PiGPIOFactory:
+                        getattr(self, i).value = None
                 except:
                     self.logging.error(f'GPIO: {i} would not initialize')
 
@@ -72,5 +78,9 @@ class Pigpio:
             getattr(self, target[0]).value = target[1]
         if type(getattr(self, target[0])) is Servo:
             getattr(self, target[0]).value = (2.0 * (target[1] / 100.0)) - 1.0
+            if type(Device.pin_factory) is not PiGPIOFactory:
+                time.sleep(1.0)
+                getattr(self, target[0]).value = None
+
         if type(getattr(self, target[0])) is PWMLED:
             getattr(self, target[0]).value = 1 * (target[1] / 100)

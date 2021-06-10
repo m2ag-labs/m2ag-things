@@ -1,6 +1,7 @@
 {
   "service": {
     "init": {
+      "pigpio": false,
       "input": {
         "shutdown": {
           "pin": 17,
