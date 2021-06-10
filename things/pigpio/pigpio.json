@@ -1,0 +1,97 @@
+{
+  "service": {
+    "init": {
+      "input": {
+        "shutdown": {
+          "pin": 17,
+          "pull_up": true
+        }
+      },
+      "output": {
+      },
+      "servo": {
+        "servo": {
+          "pin": 12
+        }
+      },
+      "pwm": {
+        "run": {
+          "pin": 19,
+          "active_high": true,
+          "initial_value": false
+        }
+      }
+    },
+    "attr": {
+      "input": {
+        "shutdown": {
+          "release": true
+        }
+      }
+    }
+  },
+  "thing": {
+    "init": {
+      "id": "urn:dev:ops:m2ag-gpio",
+      "title": "raspib.gpio",
+      "type": [
+        "PushButton"
+      ],
+      "description": "gpio on raspberry pi"
+    },
+    "props": {
+      "shutdown": {
+        "name": "shutdown",
+        "value": [
+          false,
+          "None"
+        ],
+        "metadata": {
+          "@type": "PushedProperty",
+          "title": "shutdown",
+          "type": "boolean",
+          "description": "shutdown button",
+          "readOnly": false
+        }
+      },
+      "run": {
+        "name": "run",
+        "value": [
+          0,
+          "run",
+          {
+            "index": "run"
+          }
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "run",
+          "type": "integer",
+          "description": "running led",
+          "minimum": 0,
+          "maximum": 100,
+          "readOnly": false
+        }
+      },
+      "servo": {
+        "name": "servo",
+        "value": [
+          50,
+          "servo",
+          {
+            "index": "servo"
+          }
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "servo",
+          "type": "integer",
+          "description": "gpiozero servo ",
+          "minimum": 0,
+          "maximum": 100,
+          "readOnly": false
+        }
+      }
+    }
+  }
+}

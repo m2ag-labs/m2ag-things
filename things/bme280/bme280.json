@@ -1,21 +1,41 @@
 {
   "service": {
     "init": {
-      "address": "0x40",
+      "address": "0x76",
       "svc": "i2c",
-      "driver": "adafruit_htu21d",
-      "device": "HTU21D"
+      "driver": "adafruit_bme280",
+      "device": "Adafruit_BME280_I2C"
     },
-    "attr": {}
+    "attr": {
+      "sea_level_pressure": "1016.8",
+      "mode": {
+        "adafruit_bme280": "MODE_NORMAL"
+      },
+      "standby_period": {
+        "adafruit_bme280": "STANDBY_TC_500"
+      },
+      "iir_filter": {
+        "adafruit_bme280": "IIR_FILTER_X16"
+      },
+      "overscan_humidity": {
+        "adafruit_bme280": "OVERSCAN_X1"
+      },
+      "overscan_temperature": {
+        "adafruit_bme280": "OVERSCAN_X2"
+      }
+    },
+    "offsets": {
+      "temperature": -1.5
+    }
   },
   "thing": {
     "init": {
-      "id": "urn:dev:m2ag.labs.htu21d",
-      "title": "--HOSTNAME--.htu21d",
+      "id": "urn:dev:m2ag.labs.bme280",
+      "title": "--HOSTNAME--.bme280",
       "type": [
         "TemperatureSensor"
       ],
-      "description": "humidity sensor"
+      "description": "temp/hum/press sensor"
     },
     "props": {
       "temperature": {
@@ -61,13 +81,35 @@
             "style": "radial"
           }
         }
+      },
+      "pressure": {
+        "name": "pressure",
+        "value": [
+          "pressure",
+          "None"
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "pressure",
+          "type": "number",
+          "description": "current pressure in hPa",
+          "minimum": 980,
+          "maximum": 1030,
+          "multipleOf": 0.1,
+          "unit": "hPa",
+          "readOnly": true,
+          "vendor": {
+            "style": "radial"
+          }
+        }
       }
     },
     "events": {},
     "poll": {
       "members": [
+        "temperature",
         "relative_humidity",
-        "temperature"
+        "pressure"
       ],
       "poll_interval": 6000
     }

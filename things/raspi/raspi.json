@@ -1,142 +1,174 @@
 {
-  "init": {
-    "id": "urn:dev:ops:m2ag-raspiinfo",
-    "title": "--HOSTNAME--.system",
-    "type": [
-      "TemperatureSensor"
-    ],
-    "description": "cpu temp sensor"
+  "service": {
+    "init": {},
+    "attr": {}
   },
-  "props": {
-    "temperature": {
-      "name": "cpu_temp",
-      "value": [
+  "thing": {
+    "init": {
+      "id": "urn:dev:m2ag.labs.raspi",
+      "title": "--HOSTNAME--.system",
+      "type": [
+        "TemperatureSensor"
+      ],
+      "description": "cpu temp sensor"
+    },
+    "props": {
+      "temperature": {
+        "name": "cpu_temp",
+        "value": [
+          "cpu_temp",
+          "None"
+        ],
+        "metadata": {
+          "@type": "TemperatureProperty",
+          "title": "cpu_temp",
+          "type": "number",
+          "description": "current cpu temperature",
+          "minimum": 25,
+          "maximum": 85,
+          "multipleOf": 0.1,
+          "unit": "degree celsius",
+          "readOnly": true,
+          "vendor": {
+            "style": "linear",
+            "highlight": {
+              "danger": [
+                80,
+                85
+              ],
+              "caution": [
+                65,
+                80
+              ],
+              "normal": [
+                25,
+                30
+              ]
+            }
+          }
+        }
+      },
+      "frequency": {
+        "name": "cpu_freq",
+        "value": [
+          "cpu_freq",
+          "None"
+        ],
+        "metadata": {
+          "@type": "FrequencyProperty",
+          "title": "cpu_freq",
+          "type": "number",
+          "description": "current cpu frequency",
+          "minimum": 600,
+          "maximum": 1500,
+          "multipleOf": 0.1,
+          "unit": "hertz",
+          "readOnly": true,
+          "vendor": {
+            "style": "radial",
+            "highlights": {
+              "normal": [
+                600,
+                900
+              ],
+              "caution": [
+                900,
+                1100
+              ],
+              "danger": [
+                1100,
+                1500
+              ]
+            }
+          }
+        }
+      },
+      "serial": {
+        "name": "serial",
+        "value": [
+          "serial",
+          "None"
+        ],
+        "metadata": {
+          "title": "serial number",
+          "type": "string",
+          "description": "system serial number",
+          "readOnly": true
+        }
+      },
+      "system_type": {
+        "name": "system_type",
+        "value": [
+          "system_type",
+          "None"
+        ],
+        "metadata": {
+          "title": "system_type",
+          "type": "string",
+          "description": "type of pi",
+          "readOnly": true
+        }
+      },
+      "hardware": {
+        "name": "hardware",
+        "value": [
+          "hardware",
+          "None"
+        ],
+        "metadata": {
+          "title": "hardware",
+          "type": "string",
+          "description": "chip identifier",
+          "readOnly": true
+        }
+      },
+      "revision": {
+        "name": "revision",
+        "value": [
+          "revision",
+          "None"
+        ],
+        "metadata": {
+          "title": "revision",
+          "type": "string",
+          "description": "board revision",
+          "readOnly": true
+        }
+      },
+      "os_info": {
+        "name": "os_info",
+        "value": [
+          "os_info",
+          "None"
+        ],
+        "metadata": {
+          "title": "os info",
+          "type": "string",
+          "description": "os information",
+          "readOnly": true
+        }
+      },
+      "uname": {
+        "name": "arm_ver",
+        "value": [
+          "arm_ver",
+          "None"
+        ],
+        "metadata": {
+          "title": "arm_ver",
+          "type": "string",
+          "description": "arm version",
+          "readOnly": true
+        }
+      }
+    },
+    "events": {},
+    "poll": {
+      "members": [
         "cpu_temp",
-        "None"
+        "cpu_freq"
       ],
-      "metadata": {
-        "@type": "TemperatureProperty",
-        "title": "cpu_temp",
-        "type": "number",
-        "description": "current cpu temperature",
-        "minimum": 25,
-        "maximum": 85,
-        "multipleOf": 0.1,
-        "unit": "degree celsius",
-        "readOnly": true,
-        "vendor": {
-          "style": "linear",
-          "highlight" : { "danger" : [80,85], "caution" : [65,80], "normal": [25,30]}
-        }
-      }
-    },
-    "frequency": {
-      "name": "cpu_freq",
-      "value": [
-        "cpu_freq",
-        "None"
-      ],
-      "metadata": {
-        "@type": "FrequencyProperty",
-        "title": "cpu_freq",
-        "type": "number",
-        "description": "current cpu frequency",
-        "minimum": 600,
-        "maximum": 1500,
-        "multipleOf": 0.1,
-        "unit": "hertz",
-        "readOnly": true,
-        "vendor": {
-          "style": "radial",
-          "highlights" : { "normal" : [600, 900], "caution" : [900,1100], "danger": [1100,1500]}
-        }
-      }
-    },
-    "serial": {
-      "name": "serial",
-      "value": [
-        "serial",
-        "None"
-      ],
-      "metadata": {
-        "title": "serial number",
-        "type": "string",
-        "description": "system serial number",
-        "readOnly": true
-      }
-    },
-    "system_type": {
-      "name": "system_type",
-      "value": [
-        "system_type",
-        "None"
-      ],
-      "metadata": {
-        "title": "system_type",
-        "type": "string",
-        "description": "type of pi",
-        "readOnly": true
-      }
-    },
-    "hardware": {
-      "name": "hardware",
-      "value": [
-        "hardware",
-        "None"
-      ],
-      "metadata": {
-        "title": "hardware",
-        "type": "string",
-        "description": "chip identifier",
-        "readOnly": true
-      }
-    },
-    "revision": {
-      "name": "revision",
-      "value": [
-        "revision",
-        "None"
-      ],
-      "metadata": {
-        "title": "revision",
-        "type": "string",
-        "description": "board revision",
-        "readOnly": true
-      }
-    },
-    "os_info": {
-      "name": "os_info",
-      "value": [
-        "os_info",
-        "None"
-      ],
-      "metadata": {
-        "title": "os info",
-        "type": "string",
-        "description": "os information",
-        "readOnly": true
-      }
-    },
-    "uname": {
-      "name": "arm_ver",
-      "value": [
-        "arm_ver",
-        "None"
-      ],
-      "metadata": {
-        "title": "arm_ver",
-        "type": "string",
-        "description": "arm version",
-        "readOnly": true
-      }
+      "poll_interval": 1000
     }
-  },
-  "events": {},
-  "poll": {
-    "members": [
-      "cpu_temp",
-      "cpu_freq"
-    ],
-    "poll_interval": 1000
   }
 }

@@ -1,0 +1,71 @@
+{
+  "service": {
+    "init": {
+      "address": "0x12",
+      "svc": "i2c",
+      "driver": "adafruit_pm25.i2c",
+      "device": "PM25_I2C"
+    },
+    "attr": {}
+  },
+  "thing": {
+    "init": {
+      "id": "urn:dev:m2ag.labs.pmsa003i",
+      "title": "raspib.m2ag-pms003i",
+      "type": [
+        "MultiLevelSensor"
+      ],
+      "description": "an interface to PMSA003i"
+    },
+    "props": {
+      "pm2": {
+        "name": "pm2",
+        "value": [
+          "pm2",
+          "None"
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "pm2",
+          "type": "integer",
+          "description": "pm 2.5 count",
+          "minimum": 0,
+          "maximum": 500,
+          "unit": "ppb",
+          "readOnly": true,
+          "vendor": {
+            "style": "linear"
+          }
+        }
+      },
+      "avg": {
+        "name": "avg",
+        "value": [
+          "avg",
+          "None"
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "avg",
+          "type": "integer",
+          "description": "average of last 60 readings",
+          "minimum": 0,
+          "maximum": 500,
+          "unit": "ppb",
+          "readOnly": true,
+          "vendor": {
+            "style": "linear"
+          }
+        }
+      }
+    },
+    "events": {},
+    "poll": {
+      "members": [
+        "pm2",
+        "avg"
+      ],
+      "poll_interval": 10000
+    }
+  }
+}

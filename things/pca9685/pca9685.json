@@ -1,253 +1,265 @@
 {
-  "init": {
-    "id": "m2ag.pca9685",
-    "title": "--HOSTNAME--.pca9685",
-    "type": [
-      "MultiLevelSwitch"
-    ],
-    "description": "pca9685 with channel.duty_cycle exposed"
-  },
-  "props": {
-    "ch0": {
-      "name": "ch0",
-      "value": [
-        0,
-        0
-      ],
-      "metadata": {
-        "@type": "LevelProperty",
-        "title": "ch 0",
-        "type": "integer",
-        "description": "The duty cycle of channel",
-        "minimum": 0,
-        "maximum": 65535
-      }
+  "service": {
+    "init": {
+      "address": "0x40",
+      "svc": "i2c"
     },
-    "ch1": {
-      "name": "ch1",
-      "value": [
-        1,
-        1
-      ],
-      "metadata": {
-        "@type": "LevelProperty",
-        "title": "ch 1",
-        "type": "integer",
-        "description": "The duty cycle of channel",
-        "minimum": 0,
-        "maximum": 65535
-      }
-    },
-    "ch2": {
-      "name": "ch2",
-      "value": [
-        2,
-        2
-      ],
-      "metadata": {
-        "@type": "LevelProperty",
-        "title": "ch 2",
-        "type": "integer",
-        "description": "The duty cycle of channel",
-        "minimum": 0,
-        "maximum": 65535
-      }
-    },
-    "ch3": {
-      "name": "ch3",
-      "value": [
-        3,
-        3
-      ],
-      "metadata": {
-        "@type": "LevelProperty",
-        "title": "ch 3",
-        "type": "integer",
-        "description": "The duty cycle of channel",
-        "minimum": 0,
-        "maximum": 65535
-      }
-    },
-    "ch4": {
-      "name": "ch4",
-      "value": [
-        4,
-        4
-      ],
-      "metadata": {
-        "@type": "LevelProperty",
-        "title": "ch 4",
-        "type": "integer",
-        "description": "The duty cycle of channel",
-        "minimum": 0,
-        "maximum": 65535
-      }
-    },
-    "ch5": {
-      "name": "ch5",
-      "value": [
-        5,
-        5
-      ],
-      "metadata": {
-        "@type": "LevelProperty",
-        "title": "ch 5",
-        "type": "integer",
-        "description": "The duty cycle of channel",
-        "minimum": 0,
-        "maximum": 65535
-      }
-    },
-    "ch6": {
-      "name": "ch6",
-      "value": [
-        6,
-        6
-      ],
-      "metadata": {
-        "@type": "LevelProperty",
-        "title": "ch 6",
-        "type": "integer",
-        "description": "The duty cycle of channel",
-        "minimum": 0,
-        "maximum": 65535
-      }
-    },
-    "ch7": {
-      "name": "ch7",
-      "value": [
-        7,
-        7
-      ],
-      "metadata": {
-        "@type": "LevelProperty",
-        "title": "ch 7",
-        "type": "integer",
-        "description": "The duty cycle of channel",
-        "minimum": 0,
-        "maximum": 65535
-      }
-    },
-    "ch8": {
-      "name": "ch8",
-      "value": [
-        8,
-        8
-      ],
-      "metadata": {
-        "@type": "LevelProperty",
-        "title": "ch 8",
-        "type": "integer",
-        "description": "The duty cycle of channel",
-        "minimum": 0,
-        "maximum": 65535
-      }
-    },
-    "ch9": {
-      "name": "ch9",
-      "value": [
-        9,
-        9
-      ],
-      "metadata": {
-        "@type": "LevelProperty",
-        "title": "ch 9",
-        "type": "integer",
-        "description": "The duty cycle of channel",
-        "minimum": 0,
-        "maximum": 65535
-      }
-    },
-    "ch10": {
-      "name": "ch10",
-      "value": [
-        10,
-        10
-      ],
-      "metadata": {
-        "@type": "LevelProperty",
-        "title": "ch 10",
-        "type": "integer",
-        "description": "The duty cycle of channel",
-        "minimum": 0,
-        "maximum": 65535
-      }
-    },
-    "ch11": {
-      "name": "ch11",
-      "value": [
-        11,
-        11
-      ],
-      "metadata": {
-        "@type": "LevelProperty",
-        "title": "ch 11",
-        "type": "integer",
-        "description": "The duty cycle of channel",
-        "minimum": 0,
-        "maximum": 65535
-      }
-    },
-    "ch12": {
-      "name": "ch12",
-      "value": [
-        12,
-        12
-      ],
-      "metadata": {
-        "@type": "LevelProperty",
-        "title": "ch 12",
-        "type": "integer",
-        "description": "The duty cycle of channel",
-        "minimum": 0,
-        "maximum": 65535
-      }
-    },
-    "ch13": {
-      "name": "ch13",
-      "value": [
-        13,
-        13
-      ],
-      "metadata": {
-        "@type": "LevelProperty",
-        "title": "ch 13",
-        "type": "integer",
-        "description": "The duty cycle of channel",
-        "minimum": 0,
-        "maximum": 65535
-      }
-    },
-    "ch14": {
-      "name": "ch14",
-      "value": [
-        14,
-        14
-      ],
-      "metadata": {
-        "@type": "LevelProperty",
-        "title": "ch 14",
-        "type": "integer",
-        "description": "The duty cycle of channel",
-        "minimum": 2000,
-        "maximum": 5000
-      }
-    },
-    "ch15": {
-      "name": "ch15",
-      "value": [
-        15,
-        15
-      ],
-      "metadata": {
-        "@type": "LevelProperty",
-        "title": "ch 15",
-        "type": "integer",
-        "description": "The duty cycle of channel",
-        "minimum": 2000,
-        "maximum": 5000
-      }
+    "attr": {
+      "reference_clock_speed": 27852800,
+      "frequency": 50
     }
   },
-  "events": {}
+  "thing": {
+    "init": {
+      "id": "urn:dev:m2ag.labs.pca9685",
+      "title": "--HOSTNAME--.pca9685",
+      "type": [
+        "MultiLevelSwitch"
+      ],
+      "description": "pca9685 with channel.duty_cycle exposed"
+    },
+    "props": {
+      "ch0": {
+        "name": "ch0",
+        "value": [
+          0,
+          0
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "ch 0",
+          "type": "integer",
+          "description": "The duty cycle of channel",
+          "minimum": 0,
+          "maximum": 65535
+        }
+      },
+      "ch1": {
+        "name": "ch1",
+        "value": [
+          1,
+          1
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "ch 1",
+          "type": "integer",
+          "description": "The duty cycle of channel",
+          "minimum": 0,
+          "maximum": 65535
+        }
+      },
+      "ch2": {
+        "name": "ch2",
+        "value": [
+          2,
+          2
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "ch 2",
+          "type": "integer",
+          "description": "The duty cycle of channel",
+          "minimum": 0,
+          "maximum": 65535
+        }
+      },
+      "ch3": {
+        "name": "ch3",
+        "value": [
+          3,
+          3
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "ch 3",
+          "type": "integer",
+          "description": "The duty cycle of channel",
+          "minimum": 0,
+          "maximum": 65535
+        }
+      },
+      "ch4": {
+        "name": "ch4",
+        "value": [
+          4,
+          4
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "ch 4",
+          "type": "integer",
+          "description": "The duty cycle of channel",
+          "minimum": 0,
+          "maximum": 65535
+        }
+      },
+      "ch5": {
+        "name": "ch5",
+        "value": [
+          5,
+          5
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "ch 5",
+          "type": "integer",
+          "description": "The duty cycle of channel",
+          "minimum": 0,
+          "maximum": 65535
+        }
+      },
+      "ch6": {
+        "name": "ch6",
+        "value": [
+          6,
+          6
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "ch 6",
+          "type": "integer",
+          "description": "The duty cycle of channel",
+          "minimum": 0,
+          "maximum": 65535
+        }
+      },
+      "ch7": {
+        "name": "ch7",
+        "value": [
+          7,
+          7
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "ch 7",
+          "type": "integer",
+          "description": "The duty cycle of channel",
+          "minimum": 0,
+          "maximum": 65535
+        }
+      },
+      "ch8": {
+        "name": "ch8",
+        "value": [
+          8,
+          8
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "ch 8",
+          "type": "integer",
+          "description": "The duty cycle of channel",
+          "minimum": 0,
+          "maximum": 65535
+        }
+      },
+      "ch9": {
+        "name": "ch9",
+        "value": [
+          9,
+          9
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "ch 9",
+          "type": "integer",
+          "description": "The duty cycle of channel",
+          "minimum": 0,
+          "maximum": 65535
+        }
+      },
+      "ch10": {
+        "name": "ch10",
+        "value": [
+          10,
+          10
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "ch 10",
+          "type": "integer",
+          "description": "The duty cycle of channel",
+          "minimum": 0,
+          "maximum": 65535
+        }
+      },
+      "ch11": {
+        "name": "ch11",
+        "value": [
+          11,
+          11
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "ch 11",
+          "type": "integer",
+          "description": "The duty cycle of channel",
+          "minimum": 0,
+          "maximum": 65535
+        }
+      },
+      "ch12": {
+        "name": "ch12",
+        "value": [
+          12,
+          12
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "ch 12",
+          "type": "integer",
+          "description": "The duty cycle of channel",
+          "minimum": 0,
+          "maximum": 65535
+        }
+      },
+      "ch13": {
+        "name": "ch13",
+        "value": [
+          13,
+          13
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "ch 13",
+          "type": "integer",
+          "description": "The duty cycle of channel",
+          "minimum": 0,
+          "maximum": 65535
+        }
+      },
+      "ch14": {
+        "name": "ch14",
+        "value": [
+          14,
+          14
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "ch 14",
+          "type": "integer",
+          "description": "The duty cycle of channel",
+          "minimum": 2000,
+          "maximum": 5000
+        }
+      },
+      "ch15": {
+        "name": "ch15",
+        "value": [
+          15,
+          15
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "ch 15",
+          "type": "integer",
+          "description": "The duty cycle of channel",
+          "minimum": 2000,
+          "maximum": 5000
+        }
+      }
+    },
+    "events": {}
+  }
 }

@@ -1,0 +1,68 @@
+{
+  "service": {
+    "init": {
+      "pin": 18
+    },
+    "attr": {}
+  },
+  "thing": {
+    "init": {
+      "id": "urn:wot:m2ag:indicator",
+      "title": "raspib.indicator",
+      "type": [
+        "MultiLevelSensor"
+      ],
+      "description": "interface to m2ag-labs indicator service"
+    },
+    "props": {
+      "pattern": {
+        "name": "pattern",
+        "value": [
+          "pattern",
+          "pattern",
+          {
+            "index": "pattern"
+          }
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "pattern",
+          "type": "integer",
+          "description": "set indicator pattern",
+          "minimum": 0,
+          "maximum": 7,
+          "unit": "level",
+          "readOnly": false
+        }
+      },
+      "brightness": {
+        "name": "brightness",
+        "value": [
+          "brightness",
+          "brightness",
+          {
+            "index": "brightness"
+          }
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "pattern",
+          "type": "integer",
+          "description": "set indicator brightness",
+          "minimum": 1,
+          "maximum": 100,
+          "unit": "level",
+          "readOnly": false
+        }
+      }
+    },
+    "events": {},
+    "poll": {
+      "members": [
+        "pattern",
+        "brightness"
+      ],
+      "poll_interval": 10000
+    }
+  }
+}

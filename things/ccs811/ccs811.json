@@ -1,0 +1,86 @@
+{
+  "service": {
+    "init": {
+      "address": "0x5a",
+      "svc": "i2c",
+      "driver": "adafruit_ccs811",
+      "device": "CCS811"
+    },
+    "attr": {}
+  },
+  "thing": {
+    "init": {
+      "id": "urn:dev:m2ag.labs.ccs811",
+      "title": "--HOSTNAME--.ccs811",
+      "type": [
+        "TemperatureSensor"
+      ],
+      "description": "tvoc/eco2 sensor"
+    },
+    "props": {
+      "tvoc": {
+        "name": "tvoc",
+        "value": [
+          "tvoc",
+          "None"
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "tvoc",
+          "type": "integer",
+          "description": "current tvoc",
+          "minimum": 0,
+          "maximum": 2000,
+          "multipleOf": 0,
+          "unit": "ppb",
+          "readOnly": true,
+          "vendor": {
+            "style": "radial"
+          }
+        }
+      },
+      "eco2": {
+        "name": "eco2",
+        "value": [
+          "eco2",
+          "None"
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "eco2",
+          "type": "integer",
+          "description": "current current eco2 ppm",
+          "minimum": 400,
+          "maximum": 4000,
+          "multipleOf": 0,
+          "unit": "ppm",
+          "readOnly": true,
+          "vendor": {
+            "style": "radial"
+          }
+        }
+      },
+      "edata": {
+        "name": "edata",
+        "value": [
+          -1,
+          "edata"
+        ],
+        "metadata": {
+          "title": "edata",
+          "type": "string",
+          "description": "humidity & temp from external sensor",
+          "readOnly": false
+        }
+      }
+    },
+    "events": {},
+    "poll": {
+      "members": [
+        "tvoc",
+        "eco2"
+      ],
+      "poll_interval": 6000
+    }
+  }
+}
