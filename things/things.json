@@ -1,60 +1,71 @@
 {
   "alert": {
-    "helper": true
+    "helper": true,
+    "info": "https://docs.google.com/document/d/e/2PACX-1vTZpciN1kJJKljEAxNN3fo8TEOAyCjM0TObjLaaCDT6jrxZ4fAgbfA6P4E5qlSr1YS8PDI75Qmdi3hg/pub"
   },
   "bme280": {
     "helper": false,
     "driver": [
       "adafruit-circuitpython-bme280"
-    ]
+    ],
+    "info": "https://docs.google.com/document/d/e/2PACX-1vTv8OR1t6XwOgJXElk60ELHXDoipDpzG-h38voEyOXBYVnYWP9t6YWWbJ_f_aWVLEDEkirhznd7Bxuu/pub"
   },
   "bme680": {
     "helper": true,
     "driver": [
       "adafruit-circuitpython-bme680"
-    ]
+    ],
+    "info": "https://docs.google.com/document/d/e/2PACX-1vQ2MY8InLjlMEAnSvqSGINRn_uSMDX2p3qpkHVNBslwJsbsi-Y1Cpok5afEdrFtuiFnE6DXFtUkMaca/pub"
   },
   "bmp280": {
     "helper": false,
     "driver": [
       "adafruit-circuitpython-bmp280"
-    ]
+    ],
+    "info": "https://docs.google.com/document/d/e/2PACX-1vTa_NXRqsLeHwEPk3C9X8bhKZpTSUBc4Y_ScG0hDRvZJmyB6MWXIvKG9Q4HlNpshxpycgFeqRyJjgtC/pub"
   },
   "ccs811": {
     "helper": true,
     "driver": [
       "adafruit-circuitpython-ccs811"
-    ]
+    ],
+    "info": "https://docs.google.com/document/d/e/2PACX-1vTVAPseBp66KLMtkBcs23Vf8QkU2diM18lGhjMBc0yFE5ENhXm6Ds8opCsmvDE-kui3f-gtpXPaXwFe/pub"
   },
   "htu21d": {
     "helper": false,
     "driver": [
       "adafruit-circuitpython-htu21d"
-    ]
+    ],
+    "info": "https://docs.google.com/document/d/e/2PACX-1vSPfyxH_gQj2qYhn7iVZd3tx0RXZv9Sk-HN1HUuvAaaOqvWVHHJ5ELxdF-uRilnxTtZnSbD98ZmUSnl/pub"
   },
   "lis3dh": {
     "helper": true,
     "driver": [
       "adafruit-circuitpython-lis3dh"
-    ]
+    ],
+    "info": "https://docs.google.com/document/d/e/2PACX-1vRrkqmE0mgfaiBPu_FjnbRKjD9lZin-ZZdk4Bv6Xcq_vnOhXea938qCXydkIjdU9WyklUMyujpXqh6v/pub"
   },
   "pgpio": {
-    "helper" : true
+    "helper" : true,
+    "info": "https://docs.google.com/document/d/e/2PACX-1vRXfHFiwTFKYvPmGfglhq8fZbpCk-53qm26TITzYw_85oCkb3Hd_s8hBqHmiczaq2LImWbgWPOkowMm/pub"
   },
   "pmsa003i": {
     "helper": true,
       "driver": [
         "adafruit-circuitpython-pm25"
-      ]
+      ],
+    "info": "https://docs.google.com/document/d/e/2PACX-1vScyGdnCgEvswGesYgbWTpQkmj-kI0M9aphGOkmBpAPXQLToCVNlItWY3yy6CwEJ0sgoFKp3Nzxbfmd/pub"
   },
   "raspi": {
-    "helper": true
+    "helper": true,
+    "info": "https://docs.google.com/document/d/e/2PACX-1vRX092KdD265XpaFwSrx86JhqFp27z0hP5h2tU3SWhwbOTpAcf42BFoLBjPs8-VB_7oPdARm2oIrwL_/pub"
   },
   "veml7700": {
     "helper": false,
     "driver": [
       "adafruit-circuitpython-veml7700"
-    ]
+    ],
+    "info": "https://docs.google.com/document/d/e/2PACX-1vTrtOANb-47fPwTYyYIyb2ITPF91HiNplCCumyCWEEVEk3bsDAVYXSR3abDQayjvB1NIX8o55EVQ8-W/pub"
   }
 }
 
