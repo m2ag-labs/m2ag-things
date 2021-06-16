@@ -45,7 +45,7 @@
     ],
     "info": "https://docs.google.com/document/d/e/2PACX-1vRrkqmE0mgfaiBPu_FjnbRKjD9lZin-ZZdk4Bv6Xcq_vnOhXea938qCXydkIjdU9WyklUMyujpXqh6v/pub"
   },
-  "pgpio": {
+  "pigpio": {
     "helper" : true,
     "info": "https://docs.google.com/document/d/e/2PACX-1vRXfHFiwTFKYvPmGfglhq8fZbpCk-53qm26TITzYw_85oCkb3Hd_s8hBqHmiczaq2LImWbgWPOkowMm/pub"
   },
