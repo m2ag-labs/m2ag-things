@@ -82,5 +82,6 @@
       ],
       "poll_interval": 6000
     }
-  }
+  },
+  "version": "beta 1.0"
 }

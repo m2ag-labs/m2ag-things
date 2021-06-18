@@ -43,5 +43,6 @@
       ],
       "poll_interval": 3000
     }
-  }
+  },
+  "version": "beta 1.0"
 }

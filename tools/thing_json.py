@@ -10,7 +10,7 @@ if len(sys.argv) < 2:
     print('no args')
     sys.exit(2)
 
-config = {'thing': {}, 'helper': ""}
+config = {'thing': {}, 'helper': ''}
 target = sys.argv[1]
 
 try:

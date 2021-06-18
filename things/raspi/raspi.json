@@ -170,5 +170,6 @@
       ],
       "poll_interval": 1000
     }
-  }
+  },
+  "version": "beta 1.0"
 }

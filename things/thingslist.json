@@ -38,6 +38,11 @@
     ],
     "info": "https://docs.google.com/document/d/e/2PACX-1vSPfyxH_gQj2qYhn7iVZd3tx0RXZv9Sk-HN1HUuvAaaOqvWVHHJ5ELxdF-uRilnxTtZnSbD98ZmUSnl/pub"
   },
+  "indicator": {
+    "helper": true,
+    "driver": [],
+    "info": "https://docs.google.com/document/d/e/2PACX-1vTi_oigJMUSHfQ_50XObKdWsl7eNHZj49MJsLHW6Y479U-FoFfPZ6PdaD1_uRyAzAt4DoafQ3vdu7lv/pub"
+  },
   "lis3dh": {
     "helper": true,
     "driver": [
